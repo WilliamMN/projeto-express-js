@@ -10,6 +10,7 @@ npm i
 read -p "Iniciar a aplicação? " input
 
 if [ "${input}" = "sim" ]; then
+  code .
   clear
   npm start
 fi
