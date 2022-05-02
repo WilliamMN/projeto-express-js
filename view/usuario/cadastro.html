@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="#">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>| Cadastrar</title>
+</head>
+
+<body>
+  <div id="div_formulario">
+    <input id="input_nome" type="text" placeholder="nome completo">
+    <input id="input_email" type="email" placeholder="email">
+    <input id="input_senha" type="password" placeholder="senha">
+    <input id="input_senha_confirma" type="password" placeholder="senha novamente">
+    <button
+      onclick="cadastrar(input_nome.value, input_email.value, input_senha.value, input_senha_confirma.value)">Entrar</button>
+    <span id="span_erro"></span>
+  </div>
+</body>
+
+</html>
+
+<script src="../js/usuario.js"></script>
