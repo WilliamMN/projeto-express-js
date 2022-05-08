@@ -14,9 +14,11 @@ app.use(cors())
 
 const indexRouter = require("./src/router/indexRouter")
 const usuarioRouter = require("./src/router/usuarioRouter")
+const dashboardRouter = require("./src/router/dashboardRouter")
 
 app.use("/", indexRouter)
 app.use("/usuarios", usuarioRouter)
+app.use("/dashboards", dashboardRouter)
 
 app.listen(process.env.PORTA, () => {
   console.log(`Aplicação rodando no ambiente de ${process.env.AMBIENTE} em  http://localhost:${process.env.PORTA}/`);
