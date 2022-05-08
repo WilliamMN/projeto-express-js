@@ -1,4 +1,4 @@
-const usuarioService = require("../model/usuarioModel")
+const usuarioModel = require("../model/usuarioModel")
 
 function autenticar(req, res) {
 
@@ -17,7 +17,7 @@ function autenticar(req, res) {
     res.status(400).send("Campo de senha esta vazio.")
   }
 
-  usuarioService.autenticar(email, senha)
+  usuarioModel.autenticar(email, senha)
     .then((resultadoService) => {
       if (resultadoService.length > 0) {
         res.status(200).json(resultadoService[0]);
@@ -55,12 +55,12 @@ function cadastrar(req, res) {
     res.status(400).send("Campo de senha esta vazio.")
   }
 
-  usuarioService.buscarUsuario(email)
+  usuarioModel.buscarUsuario(email)
     .then((resultado) => {
       if (resultado.length > 0) {
         res.status(409).json({ message: `Email ${email} já cadastrado.` });
       } else {
-        usuarioService.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, senha)
           .then(() => {
             res.status(201).send({ message: `Usuario cadastrado.` });
           }).catch(
