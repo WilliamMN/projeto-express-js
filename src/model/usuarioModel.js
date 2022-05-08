@@ -12,8 +12,13 @@ function buscarUsuario(email) {
   return database.executar(`select email from tb_usuario where email = '${email}'`)
 }
 
+function usuarioExistePeloId(id) {
+  return database.executar(`select email from tb_usuario where id = '${id}'`)
+}
+
 module.exports = {
   autenticar,
   cadastrar,
-  buscarUsuario
+  buscarUsuario,
+  usuarioExistePeloId
 }
