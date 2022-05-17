@@ -1,3 +1,7 @@
+// process.env.AMBIENTE = "desenvolvimento";
+process.env.AMBIENTE = "producao";
+process.env.PORTA = 3333;
+
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
