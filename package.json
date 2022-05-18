@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./site/wwwroot/",
+    "start": "node ./site/wwwroot/site/app.js",
     "postinstall": "cd site && npm install"
   }
 }
